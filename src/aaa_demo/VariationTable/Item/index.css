@@ -1,0 +1,15 @@
+.isR {
+  font-weight: lighter;
+  font-size: 12px;
+  color: #aaa
+}
+
+.isX {
+  font-weight: lighter;
+  font-size: 12px;
+  color: #ccc
+}
+
+.notR {
+  font-weight: bold;
+}
