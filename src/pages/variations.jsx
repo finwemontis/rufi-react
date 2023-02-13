@@ -15,6 +15,7 @@ export default function Variations() {
 
   const requestInfo = {
     url: '/variation',
+    // url: '/expressmatrix',
     pubName: 'varData'
   }
 

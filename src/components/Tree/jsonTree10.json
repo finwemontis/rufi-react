@@ -1,0 +1,230 @@
+{
+  "json": {
+    "name": "root",
+    "children": [
+      {
+        "name": "GP505_protein",
+        "original_child_order": 1,
+        "attribute": "0.000888154",
+        "annotation": ""
+      },
+      {
+        "name": "1",
+        "original_child_order": 2,
+        "children": [
+          {
+            "name": "1",
+            "original_child_order": 1,
+            "children": [
+              {
+                "name": "GP635_protein",
+                "original_child_order": 1,
+                "attribute": "0.0028351",
+                "annotation": ""
+              },
+              {
+                "name": "1",
+                "original_child_order": 2,
+                "children": [
+                  {
+                    "name": "GP543_protein",
+                    "original_child_order": 1,
+                    "attribute": "0.00187312",
+                    "annotation": ""
+                  },
+                  {
+                    "name": "1",
+                    "original_child_order": 2,
+                    "children": [
+                      {
+                        "name": "GP119_protein",
+                        "original_child_order": 1,
+                        "attribute": "0.00225337",
+                        "annotation": ""
+                      },
+                      {
+                        "name": "1",
+                        "original_child_order": 2,
+                        "children": [
+                          {
+                            "name": "1",
+                            "original_child_order": 1,
+                            "children": [
+                              {
+                                "name": "HP519_protein",
+                                "original_child_order": 1,
+                                "attribute": "0.00235306",
+                                "annotation": ""
+                              },
+                              {
+                                "name": "Gla4_protein",
+                                "original_child_order": 2,
+                                "attribute": "0.00195661",
+                                "annotation": ""
+                              }
+                            ],
+                            "bootstrap_values": "1",
+                            "attribute": "0.000587917",
+                            "annotation": ""
+                          },
+                          {
+                            "name": "1",
+                            "original_child_order": 2,
+                            "children": [
+                              {
+                                "name": "1",
+                                "original_child_order": 1,
+                                "children": [
+                                  {
+                                    "name": "534M_protein",
+                                    "original_child_order": 1,
+                                    "attribute": "0.00241268",
+                                    "annotation": ""
+                                  },
+                                  {
+                                    "name": "GP100_protein",
+                                    "original_child_order": 2,
+                                    "attribute": "0.00214591",
+                                    "annotation": ""
+                                  }
+                                ],
+                                "bootstrap_values": "1",
+                                "attribute": "0.000701769",
+                                "annotation": ""
+                              },
+                              {
+                                "name": "1",
+                                "original_child_order": 2,
+                                "children": [
+                                  {
+                                    "name": "GP622_protein",
+                                    "original_child_order": 1,
+                                    "attribute": "0.00207117",
+                                    "annotation": ""
+                                  },
+                                  {
+                                    "name": "1",
+                                    "original_child_order": 2,
+                                    "children": [
+                                      {
+                                        "name": "GP58_protein",
+                                        "original_child_order": 1,
+                                        "attribute": "0.00200976",
+                                        "annotation": ""
+                                      },
+                                      {
+                                        "name": "GP524_protein",
+                                        "original_child_order": 2,
+                                        "attribute": "0.00272385",
+                                        "annotation": ""
+                                      }
+                                    ],
+                                    "bootstrap_values": "1",
+                                    "attribute": "0.000714289",
+                                    "annotation": ""
+                                  }
+                                ],
+                                "bootstrap_values": "1",
+                                "attribute": "0.000465976",
+                                "annotation": ""
+                              }
+                            ],
+                            "bootstrap_values": "1",
+                            "attribute": "0.000408793",
+                            "annotation": ""
+                          }
+                        ],
+                        "bootstrap_values": "1",
+                        "attribute": "0.000880336",
+                        "annotation": ""
+                      }
+                    ],
+                    "bootstrap_values": "1",
+                    "attribute": "0.00253466",
+                    "annotation": ""
+                  }
+                ],
+                "bootstrap_values": "1",
+                "attribute": "0.00167489",
+                "annotation": ""
+              }
+            ],
+            "bootstrap_values": "1",
+            "attribute": "0.00145732",
+            "annotation": ""
+          },
+          {
+            "name": "1",
+            "original_child_order": 2,
+            "children": [
+              {
+                "name": "1",
+                "original_child_order": 1,
+                "children": [
+                  {
+                    "name": "GP117_protein",
+                    "original_child_order": 1,
+                    "attribute": "0.00157102",
+                    "annotation": ""
+                  },
+                  {
+                    "name": "GP680_protein",
+                    "original_child_order": 2,
+                    "attribute": "0.00180796",
+                    "annotation": ""
+                  }
+                ],
+                "bootstrap_values": "1",
+                "attribute": "0.000613034",
+                "annotation": ""
+              },
+              {
+                "name": "1",
+                "original_child_order": 2,
+                "children": [
+                  {
+                    "name": "1",
+                    "original_child_order": 1,
+                    "children": [
+                      {
+                        "name": "HP436_protein",
+                        "original_child_order": 1,
+                        "attribute": "0.00151396",
+                        "annotation": ""
+                      },
+                      {
+                        "name": "IRGSP_protein",
+                        "original_child_order": 2,
+                        "attribute": "0.00870305",
+                        "annotation": ""
+                      }
+                    ],
+                    "bootstrap_values": "1",
+                    "attribute": "0.000561257",
+                    "annotation": ""
+                  },
+                  {
+                    "name": "GP523_protein",
+                    "original_child_order": 2,
+                    "attribute": "0.00126739",
+                    "annotation": ""
+                  }
+                ],
+                "bootstrap_values": "1",
+                "attribute": "0.00067685",
+                "annotation": ""
+              }
+            ],
+            "bootstrap_values": "1",
+            "attribute": "0.000627174",
+            "annotation": ""
+          }
+        ],
+        "bootstrap_values": "1",
+        "attribute": "0.000888154",
+        "annotation": ""
+      }
+    ]
+  },
+  "error": null
+}

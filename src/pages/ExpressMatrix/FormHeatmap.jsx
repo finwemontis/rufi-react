@@ -1,18 +1,35 @@
 import React, { useState } from 'react'
-import { Form, Input, Checkbox, Button, Divider, Col, Row } from 'antd'
+import { Form, Input, Checkbox, Select, Button, Divider, Space, Col, Row } from 'antd'
+import PubSub from 'pubsub-js'
+import { request } from '../../components/Request'
+import options from './options'
 
 const { TextArea } = Input
 
-export default function FormHeatmap() {
+export default function FormHeatmap(msg) {
 
+  const { url, pubName } = msg
+
+  // 表单的回调
   const onFinish = (values) => {
     console.log('heatmap Success:', values);
+    if (values){
+      request.get(url, {params: {values}}).then((result)=>{
+        if(result.status === 200){
+          PubSub.publish(pubName, result.data)
+        }
+      })
+      
+    } else if (!values) {
+      console.log('input cant be empty');
+    }
   }
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo)
   }
 
+  // 表单样式
   const formItemLayout = {
     labelCol: {
       span: 6,
@@ -20,6 +37,11 @@ export default function FormHeatmap() {
     wrapperCol: {
       span: 14,
     },
+  };
+
+  // accessions选择的回调
+  const handleChange = (value) => {
+    console.log(`selected ${value}`);
   };
 
   return (
@@ -32,6 +54,9 @@ export default function FormHeatmap() {
             name='heatmap'
             initialValues={{
               remember: true,
+              // variations: ['W1943', "W2064", 'W3051', 'GP100'],
+              variations: ['W1943'],
+              geneSet: ['Os01t0883800', 'Os02t0244100', 'Os03t0407400', 'Os07t0261200', 'Os01t0197700', 'Os04t0413500']
             }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
@@ -95,6 +120,30 @@ export default function FormHeatmap() {
               </Checkbox.Group>
             </Form.Item>
 
+            {/* ........... */}
+            <Form.Item name="variations" label="Variations"
+              rules={[
+                {
+                  required: true,
+                  message: 'Please choose at least one variation!',
+                },
+              ]}
+              onChange={(value)=>{console.log('form item of abc:', value.currentTarget)}}
+            >
+              <Select
+                mode="multiple"
+                allowClear
+                style={{
+                  width: '100%',
+                }}
+                placeholder="Please select"
+                onChange={handleChange}
+                options={options}
+              />
+              
+            </Form.Item>
+            {/* ........... */}
+
 
             <Form.Item
               label="Gene set"
@@ -102,7 +151,7 @@ export default function FormHeatmap() {
               rules={[
                 {
                   required: true,
-                  message: 'Please input a variation!',
+                  message: 'Please input a gene set!',
                 },
               ]}
             >
@@ -133,3 +182,10 @@ export default function FormHeatmap() {
       </>
   )
 }
+
+// p = '149_CDS_pa/(.*)[\.all]{0,1}?\.evm\.out_nucleus\.cds'
+// l = []
+// for i in s:
+//     st = re.findall(p, i)[0]
+//     st = st.replace('.all', '')
+//     l.append(st)
