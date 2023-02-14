@@ -23,8 +23,7 @@ export default function ExpressMatrix() {
   const [ set, setSet ] = useState({})
 
   let subToken = PubSub.subscribe('heatmapData', (msg, data)=>{
-    console.log('this is data from server:');
-    console.log('msg:', msg, 'data:', data, 'type:', typeof(data))
+    console.log('this is data from server: msg:', msg, 'data:', data, 'type:', typeof(data))
     setSet(data)
     if (load){
       console.log('load is true')
@@ -51,7 +50,6 @@ export default function ExpressMatrix() {
           {
             load ? (<Heatmap dataset={set}></Heatmap>) : ('asd')
           }
-          
         </Suspense>
     </Space>
   )
