@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, lazy, Suspense } from 'react'
 import PubSub from 'pubsub-js'
 import { Col, Row, Space } from 'antd'
 import TopText from '../../components/TopText'
 import FormHeatmap from './FormHeatmap'
-import accessionInfo from '../../resource/144_from_zhaoyan'
-// import Test from './Test'
-
+const Heatmap = lazy(()=>import('./Heatmap'))
 
 
 const text = {
@@ -16,18 +14,23 @@ const text = {
 
 const requestInfo = {
   url: '/expressmatrix',
-  // url: '/variation',
   pubName: 'heatmapData'
 }
 
 export default function ExpressMatrix() {
 
+  const [ load, setLoad ] = useState(false)
   const [ set, setSet ] = useState({})
 
   let subToken = PubSub.subscribe('heatmapData', (msg, data)=>{
     console.log('this is data from server:');
     console.log('msg:', msg, 'data:', data, 'type:', typeof(data))
     setSet(data)
+    if (load){
+      console.log('load is true')
+    } else {
+      setLoad(true)
+    }
   })
   
   useEffect(()=>{
@@ -37,13 +40,6 @@ export default function ExpressMatrix() {
   })
 
   console.log('this is heatmap');
-  // console.log(accessionInfo);
-
-  // accessionInfo.forEach((item)=>{
-  //   if (item.newGroup === 'Os.indica'){
-  //     console.log('item', item)
-  //   }
-  // })
 
   return (
       <Space direction="vertical" style={{display: 'flex'}} size="middle">
@@ -51,9 +47,12 @@ export default function ExpressMatrix() {
           <TopText text={text}></TopText>
         </Row>
         <FormHeatmap {...requestInfo}></FormHeatmap>
-        {/* <Test></Test> */}
-        
-
+        <Suspense fallback={<div>loading...</div>}>
+          {
+            load ? (<Heatmap dataset={set}></Heatmap>) : ('asd')
+          }
+          
+        </Suspense>
     </Space>
   )
 }

@@ -54,8 +54,8 @@ export default function FormHeatmap(msg) {
             name='heatmap'
             initialValues={{
               remember: true,
-              // variations: ['W1943', "W2064", 'W3051', 'GP100'],
-              variations: ['W1943'],
+              variations: ['W1943', "W2064", 'GP100'],
+              // variations: ['W1943'],
               geneSet: ['Os01t0883800', 'Os02t0244100', 'Os03t0407400', 'Os07t0261200', 'Os01t0197700', 'Os04t0413500']
             }}
             onFinish={onFinish}
