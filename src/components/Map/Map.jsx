@@ -615,7 +615,7 @@ export default function Map() {
     ]
   };
 
-  console.log('map data:', convertData(data))
+  // console.log('map data:', convertData(data))
   
   const style = {width: '1400px', height: '600px'}
   return (

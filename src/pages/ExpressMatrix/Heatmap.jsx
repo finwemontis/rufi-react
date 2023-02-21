@@ -1,4 +1,3 @@
-import { elementType } from 'prop-types';
 import React from 'react'
 import Charts from '../../components/Charts';
 
