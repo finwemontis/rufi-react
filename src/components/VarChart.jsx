@@ -1,11 +1,9 @@
 import React from 'react'
 import Charts from './Charts'
 
-export default function VarChart(gff, varSet) {
+export default function VarChart(set) {
 
-  // 为什么这里就打印了呢
-  console.log('varChart get gff:', gff, "and set:", varSet)
-
+  const { gff, varSet } = set
   const allVariations = []
 
   // function doVarSet(varSet) {
@@ -16,7 +14,7 @@ export default function VarChart(gff, varSet) {
   //   return data
   // }
 
-  // 一个散点图和一个什么
+  // 一个散点图和自定义类型
   const option = {
     title: {
       text: 'variations',
@@ -62,7 +60,7 @@ export default function VarChart(gff, varSet) {
     ]
   }
 
-  const style = { height: '600px', weight: '1200px' }
+  const style = { height: '1000px', weight: '1200px' }
 
   return (
     // <Charts option={option} style={style}></Charts>

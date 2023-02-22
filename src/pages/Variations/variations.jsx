@@ -43,7 +43,7 @@ export default function Variations() {
   console.log("first", first);
 
 
-  // console.log(varSet);
+  // console.log('set', varSet);
 
   return (
     <Space direction="vertical" style={{display: 'flex'}} size="middle">
