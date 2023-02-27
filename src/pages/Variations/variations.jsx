@@ -4,7 +4,7 @@ import { Col, Row, Space } from 'antd'
 import TopText from '../../components/TopText'
 import InputBox from '../../components/InputBox'
 import VarTable from '../../components/VarTable/VarTable'
-import VarChart from '../../components/VarChart'
+import Gene from '../../components/VarTable/Gene'
 
 export default function Variations() {
 
@@ -20,7 +20,7 @@ export default function Variations() {
     pubName: 'varData'
   }
 
-  const [ varSet, setVarSet ] = useState({})
+  const [ vars, setVars ] = useState({})
   const [ gff, setGff ] = useState({})
   const [ first, setFirst ] = useState(true)
 
@@ -28,7 +28,7 @@ export default function Variations() {
     console.log('this is conponent variations');
     console.log('msg:', msg, 'data:', data, 'type:', typeof(data))
     setGff(data.gff)
-    setVarSet(data.vars)
+    setVars(data.vars)
     if (first){
       setFirst(false)
     }
@@ -55,11 +55,11 @@ export default function Variations() {
           <InputBox {...requestInfo}></InputBox>
         </Col>
         <Col span={22} offset={1}>
-          <VarTable {...varSet}></VarTable>
+          <VarTable {...vars}></VarTable>
         </Col>
       </Row>
       {
-        first ? <div>hello, {first} first</div> : <VarChart gff={gff} varSet={varSet}></VarChart>
+        first ? <div>hello, {first} first</div> : <Gene gff={gff} vars={vars}></Gene>
       }
         
 

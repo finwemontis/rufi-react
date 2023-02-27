@@ -122,7 +122,7 @@ export default function VarTable(set) {
   {
     title: 'GP3',
     dataIndex: 'GP3',
-    key: 'japonica',
+    key: 'indica',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -131,15 +131,33 @@ export default function VarTable(set) {
   {
     title: 'GP22',
     dataIndex: 'GP22',
-    key: 'japonica',
+    key: 'indica',
     width: 90,
     render: (text)=>{
       return colStyle(text)
     }
   },
   {
-  title: 'GP39',
-  dataIndex: 'GP39',
+    title: 'GP51',
+    dataIndex: 'GP51',
+    key: 'indica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+      title: 'GP72',
+      dataIndex: 'GP72',
+      key: 'indica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+{
+  title: 'GP772-1',
+  dataIndex: 'GP772_1',
   key: 'indica',
   width: 90,
   render: (text)=>{
@@ -147,441 +165,411 @@ export default function VarTable(set) {
   }
   },
   {
-  title: 'GP51',
-  dataIndex: 'GP51',
-  key: 'indica',
+    title: 'HP119',
+    dataIndex: 'HP119',
+    key: 'indica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+    title: 'HP263',
+    dataIndex: 'HP263',
+    key: 'indica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+      title: 'HP327',
+      dataIndex: 'HP327',
+      key: 'indica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+      title: 'HP517-1',
+      dataIndex: 'HP517_1',
+      key: 'indica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+      title: 'HP362-2',
+      dataIndex: 'HP362_2',
+      key: 'indica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+      title: 'HP383',
+      dataIndex: 'HP383',
+      key: 'indica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+        title: 'HP396',
+        dataIndex: 'HP396',
+        key: 'indica',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+        {
+        title: 'HP407',
+        dataIndex: 'HP407',
+        key: 'indica',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+        {
+        title: 'HP486',
+        dataIndex: 'HP486',
+        key: 'indica',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+        {
+        title: 'HP492',
+        dataIndex: 'HP492',
+        key: 'indica',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+  {
+    title: 'HP577',
+    dataIndex: 'HP577',
+    key: 'indica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+      title: 'GLA4',
+      dataIndex: 'GLA4',
+      key: 'indica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+        title: 'UR28',
+        dataIndex: 'UR28',
+        key: 'indica',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+///////////////////////
+
+  {
+  title: 'GP39',
+  dataIndex: 'GP39',
+  key: 'japonica',
   width: 90,
   render: (text)=>{
     return colStyle(text)
   }
   },
+  {
+    title: 'GP77',
+    dataIndex: 'GP77',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+  {
+    title: 'GP536',
+    dataIndex: 'GP536',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+      title: 'GP551',
+      dataIndex: 'GP551',
+      key: 'japonica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+        title: 'GP677',
+        dataIndex: 'GP677',
+        key: 'japonica',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+        {
+        title: 'GP761-1',
+        dataIndex: 'GP761_1',
+        key: 'japonica',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+    {
+    title: 'HP13-2',
+    dataIndex: 'HP13_2',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+    title: 'HP14',
+    dataIndex: 'HP14',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+    title: 'HP38',
+    dataIndex: 'HP38',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+      title: 'HP44',
+      dataIndex: 'HP44',
+      key: 'japonica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+      title: 'HP45',
+      dataIndex: 'HP45',
+      key: 'japonica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+      title: 'HP48',
+      dataIndex: 'HP48',
+      key: 'japonica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+      title: 'HP91-2',
+      dataIndex: 'HP91_2',
+      key: 'japonica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+
+  {
+    title: 'HP98',
+    dataIndex: 'HP98',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+    title: 'HP103',
+    dataIndex: 'HP103',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+      title: 'HP274',
+      dataIndex: 'HP274',
+      key: 'japonica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+      title: 'HP314',
+      dataIndex: 'HP314',
+      key: 'japonica',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+        title: 'HP390',
+        dataIndex: 'HP390',
+        key: 'japonica',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+        {
+          title: 'WYG7',
+          dataIndex: 'WYG7',
+          key: 'japonica',
+          width: 90,
+          render: (text)=>{
+            return colStyle(text)
+          }
+          },
+          {
+            title: 'KY131',
+            dataIndex: 'KY131',
+            key: 'japonica',
+            width: 90,
+            render: (text)=>{
+              return colStyle(text)
+            }
+            },
+            {
+            title: 'LG31',
+            dataIndex: 'LG31',
+            key: 'japonica',
+            width: 90,
+            render: (text)=>{
+              return colStyle(text)
+            }
+            },
+    {
+    title: 'DHX2',
+    dataIndex: 'DHX2',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+    title: 'IL9',
+    dataIndex: 'IL9',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+    title: 'Koshihikari',
+    dataIndex: 'Koshihikari',
+    key: 'japonica',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+  ////////////////////
   {
   title: 'GP62',
   dataIndex: 'GP62',
-  key: 'Or-I',
+  key: 'aus',
   width: 90,
   render: (text)=>{
     return colStyle(text)
   }
-  },
-  {
-  title: 'GP72',
-  dataIndex: 'GP72',
-  key: 'Or-II',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP77',
-  dataIndex: 'GP77',
-  key: 'Or-III',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
+},
+{
   title: 'GP104',
   dataIndex: 'GP104',
-  key: 'intermedia',
+  key: 'aus',
   width: 90,
   render: (text)=>{
     return colStyle(text)
   }
   },
   {
-  title: 'GP124',
-  dataIndex: 'GP124',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP772-1',
-  dataIndex: 'GP772_1',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
+    title: 'GP124',
+    dataIndex: 'GP124',
+    key: 'aus',
+    width: 90,
+    render: (text)=>{
+      return colStyle(text)
+    }
+    },
+    {
+      title: 'GP540',
+      dataIndex: 'GP540',
+      key: 'aus',
+      width: 90,
+      render: (text)=>{
+        return colStyle(text)
+      }
+      },
+      {
+        title: 'Kasalath',
+        dataIndex: 'Kasalath',
+        key: 'aus',
+        width: 90,
+        render: (text)=>{
+          return colStyle(text)
+        }
+        },
+
+  ///////////////////////////////////
+  
+  
   {
   title: 'GP295-1',
   dataIndex: 'GP295_1',
-  key: 'japonica',
+  key: 'aromatic',
   width: 90,
   render: (text)=>{
     return colStyle(text)
   }
   },
-  {
-  title: 'GP536',
-  dataIndex: 'GP536',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP540',
-  dataIndex: 'GP540',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP551',
-  dataIndex: 'GP551',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP567',
-  dataIndex: 'GP567',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP640',
-  dataIndex: 'GP640',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP669',
-  dataIndex: 'GP669',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP677',
-  dataIndex: 'GP677',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GP761-1',
-  dataIndex: 'GP761_1',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP13-2',
-  dataIndex: 'HP13_2',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP14',
-  dataIndex: 'HP14',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP38',
-  dataIndex: 'HP38',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP44',
-  dataIndex: 'HP44',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP45',
-  dataIndex: 'HP45',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP48',
-  dataIndex: 'HP48',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP91-2',
-  dataIndex: 'HP91_2',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP98',
-  dataIndex: 'HP98',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP103',
-  dataIndex: 'HP103',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP119',
-  dataIndex: 'HP119',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP263',
-  dataIndex: 'HP263',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP274',
-  dataIndex: 'HP274',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP314',
-  dataIndex: 'HP314',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP327',
-  dataIndex: 'HP327',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP517-1',
-  dataIndex: 'HP517_1',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP362-2',
-  dataIndex: 'HP362_2',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP383',
-  dataIndex: 'HP383',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP390',
-  dataIndex: 'HP390',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP396',
-  dataIndex: 'HP396',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP407',
-  dataIndex: 'HP407',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP486',
-  dataIndex: 'HP486',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP492',
-  dataIndex: 'HP492',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'HP577',
-  dataIndex: 'HP577',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'WYG7',
-  dataIndex: 'WYG7',
-  key: 'Or-III',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'GLA4',
-  dataIndex: 'GLA4',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'Kasalath',
-  dataIndex: 'Kasalath',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'KY131',
-  dataIndex: 'KY131',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'LG31',
-  dataIndex: 'LG31',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'DHX2',
-  dataIndex: 'DHX2',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'IL9',
-  dataIndex: 'IL9',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'Koshihikari',
-  dataIndex: 'Koshihikari',
-  key: 'japonica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
-  {
-  title: 'UR28',
-  dataIndex: 'UR28',
-  key: 'indica',
-  width: 90,
-  render: (text)=>{
-    return colStyle(text)
-  }
-  },
+
+  /////////////////////
+ 
+  
+  
+
+
   {
   title: 'W0123-1',
   dataIndex: 'W0123_1',
-  key: 'Or-III',
+  key: 'Or-I',
   width: 90,
   render: (text)=>{
     return colStyle(text)
@@ -590,7 +578,7 @@ export default function VarTable(set) {
   {
   title: 'W0128',
   dataIndex: 'W0128',
-  key: 'Or-II',
+  key: 'Or-I',
   width: 90,
   render: (text)=>{
     return colStyle(text)
@@ -608,7 +596,7 @@ export default function VarTable(set) {
   {
     title: 'W0170',
     dataIndex: 'W0170',
-    key: 'Or-III',
+    key: 'Or-II',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -626,7 +614,7 @@ export default function VarTable(set) {
   {
     title: 'W1698',
     dataIndex: 'W1698',
-    key: 'Or-I',
+    key: 'Or-II',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -635,7 +623,7 @@ export default function VarTable(set) {
   {
     title: 'W1739',
     dataIndex: 'W1739',
-    key: 'Or-III',
+    key: 'Or-II',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -653,7 +641,7 @@ export default function VarTable(set) {
   {
     title: 'W1777',
     dataIndex: 'W1777',
-    key: 'Or-I',
+    key: 'Or-III',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -662,7 +650,7 @@ export default function VarTable(set) {
   {
     title: 'W3078-2',
     dataIndex: 'W3078_2',
-    key: 'Or-II',
+    key: 'Or-III',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -671,7 +659,7 @@ export default function VarTable(set) {
   {
     title: 'W1943',
     dataIndex: 'W1943',
-    key: 'Or-I',
+    key: 'Or-II',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -689,7 +677,7 @@ export default function VarTable(set) {
   {
     title: 'W2012',
     dataIndex: 'W2012',
-    key: 'Or-II',
+    key: 'Or-III',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -698,7 +686,7 @@ export default function VarTable(set) {
   {
     title: 'W3095-2',
     dataIndex: 'W3095_2',
-    key: 'Or-I',
+    key: 'Or-III',
     width: 90,
     render: (text)=>{
       return colStyle(text)
@@ -707,7 +695,7 @@ export default function VarTable(set) {
   {
     title: 'W3105-1',
     dataIndex: 'W3105_1',
-    key: 'Or-II',
+    key: 'Or-III',
     width: 90,
     render: (text)=>{
       return colStyle(text)
