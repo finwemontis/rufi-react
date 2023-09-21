@@ -56,7 +56,18 @@ export default function FormHeatmap(msg) {
               remember: true,
               variations: ['W1943', "W2064", 'GP100'],
               // variations: ['W1943'],
-              geneSet: ['Os01t0883800', 'Os02t0244100', 'Os03t0407400', 'Os07t0261200', 'Os01t0197700', 'Os04t0413500']
+              geneSet: ['Os01t0883800', 'Os02t0244100', 'Os03t0407400', 
+                        'Os07t0261200', 'Os01t0197700', 'Os04t0413500',
+                        'Os01t0109300-02', 'Os01t0110050-01', 'Os01t0111500-01',
+                        'Os01t0112100-01', 'Os01t0112600-01', 'Os01t0512800-00',
+                        'Os01t0518800-01', 'Os01t0531300-00', 'Os01t0550800-01',
+                        'Os01t0552050-00', 'Os01t0558200-01', 'Os05t0295700-01',
+                        'Os06t0695300-01', 'Os06t0695500-01', 'Os06t0704000-01',
+                        'Os07t0654900', 'Os07t0655600', 'Os07t0658300',
+                        'Os07t0674800', 'Os07t0676600', 'Os03t0666700',
+                        'Os03t0667400', 'Os01t0894075', 'Os08t0545900',
+                        'Os08t0546467', 'Os08t0547100', 'Os12t0265201'
+            ]
             }}
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
@@ -157,7 +168,7 @@ export default function FormHeatmap(msg) {
             >
               <TextArea 
                 allowClear 
-                maxLength={900} 
+                maxLength={2000} 
                 style={{width:'800px', height:'300px'}}
                 initialvalue={"Os01t0101900-00\nOs01t0101850-00\nOs01t0101800-01\nOs01t0101700-00\nOs01t0101600-01\nOs01t0101300-01\nOs01t0101200-01\nOs01t0101150-00"}
               >

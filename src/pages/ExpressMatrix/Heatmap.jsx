@@ -20,13 +20,19 @@ export default function Heatmap(dataset) {
   })
   ref = ref.reverse()
 
-  
-  let xTissue = []
-  for(let i=0;i<variations.length;i++){
+  const xTissue = []
+  variations.forEach((element)=>{
     tissue.forEach((e)=>{
-      xTissue.push(e)
+      xTissue.push(element + ' ' + e)
     })
-  }
+  })
+  
+  // let xTissue = []
+  // for(let i=0;i<variations.length;i++){
+  //   tissue.forEach((e)=>{
+  //     xTissue.push(e)
+  //   })
+  // }
 
   let data = []
 
@@ -54,6 +60,32 @@ export default function Heatmap(dataset) {
       })
     })
   })
+
+  // 求最大最小值
+  let max = 0
+  let min = 1
+  // let min = 1
+  console.log(data);
+  data.forEach((item)=>{
+    let n = parseFloat(item[2])
+    console.log(typeof(n))
+    if(n >= max){
+      max = n
+    }
+    if(item[2] < min){
+      min = item[2]
+    }
+  })
+
+  console.log('max:', max, 'min: ', min);
+
+  let newData = data.map((item)=>{
+    // return [item[0], item[1], (item[2]/max).toFixed(6), {'value': item[2]}]
+    // return [item[0], item[1], (item[2]/max).toFixed(6)]  //线性归一化粗糙版
+    return [item[0], item[1], ((item[2] - min)/(max - min)).toFixed(6)]  //线性归一化标准版
+    // return [item[0], item[1], item[2]]  //原始数据
+  })
+  // 有大问题 图上鼠标放上去显示原始数据怎么办
 
   const option = {
     title: {
@@ -91,6 +123,9 @@ export default function Heatmap(dataset) {
       position: 'top',
       splitArea: {
         show: true
+      },
+      axisLabel: {
+        fontSize: 13,
       }
     },
     yAxis: {
@@ -98,6 +133,9 @@ export default function Heatmap(dataset) {
       data: ref,
       splitArea: {
         show: true
+      },
+      axisLabel: {
+        fontSize: 14
       }
     },
     visualMap: {
@@ -105,7 +143,7 @@ export default function Heatmap(dataset) {
       max: 1,
       calculable: true,
       // orient: 'horizontal',
-      left: '68%',
+      left: '63%',
       bottom: '80%',
       color: [
         '#ff6347',
@@ -116,10 +154,10 @@ export default function Heatmap(dataset) {
       {
         name: 'TPM W1943',
         type: 'heatmap',
-        data: data,
+        data: newData,
         label: {
           // 图上是否显示数字
-          show: true
+          // show: true
         },
         emphasis: {
           itemStyle: {
@@ -127,11 +165,19 @@ export default function Heatmap(dataset) {
             shadowColor: 'rgba(0, 0, 0, 0.5)'
           }
         }
-      }
+      },
+      // {
+      //   // name: 'variation',
+      //   type: 'bar',
+      //   data: [],
+      //   yAxis: {
+      //     data: variations
+      //   }
+      // }
     ]
   };
 
-  const style = {width: "2000px", height:"1300px"}
+  const style = {width: "2000px", height:"1500px"}
   return (
     <Charts option={option} style={style}></Charts>
   )

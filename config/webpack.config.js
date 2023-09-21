@@ -334,18 +334,18 @@ module.exports = function (webpackEnv) {
           babelRuntimeEntryHelpers,
           babelRuntimeRegenerator,
         ]),
-        // 修改:新增 开始
+        // 添加这一项会报错 无法打包
         // new webpack.ProvidePlugin({
         //   Buffer: ['buffer', 'Buffer']
-        // }),
-      // 结束
+        // })
+      // 
       ],
-      // 修改:新增 开始
+      // 
       fallback: { 
         "buffer": require.resolve('buffer/'),
         "url": false,
       }
-      // 结束
+      // 
     },
     module: {
       strictExportPresence: true,
@@ -622,6 +622,11 @@ module.exports = function (webpackEnv) {
       // during a production build.
       // Otherwise React will be compiled in the very slow development mode.
       new webpack.DefinePlugin(env.stringified),
+      //// 
+      new webpack.ProvidePlugin({
+          Buffer: ['buffer', 'Buffer']
+        }),
+      //// 
       // Experimental hot reloading for React .
       // https://github.com/facebook/react/tree/main/packages/react-refresh
       isEnvDevelopment &&

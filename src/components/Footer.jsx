@@ -10,7 +10,7 @@ export default function MyFooter() {
         // position: 'sticky',
         bottom: '0'
     }}>
-      this is a footer that I just write
+      {/* this is a footer that I just write */}
     </Footer>
   )
 }

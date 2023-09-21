@@ -1,5 +1,7 @@
 import React, { useEffect, useState, Suspense } from 'react'
 import PubSub from 'pubsub-js'
+import Loading from '../../components/Loading'
+import ChartBeforeLoad from '../../components/FirstLoad/ChartBeforeLoad'
 // import Charts from '../../components/Charts'
 
 const Charts = React.lazy(()=>import('../../components/Charts'))
@@ -8,9 +10,12 @@ const Charts = React.lazy(()=>import('../../components/Charts'))
 export default function BarChart() {
 
   const [set, setSet] = useState({})
+  const [ first, setFirst ] = useState(true)
+
 
   let subToken = PubSub.subscribe('barChartSet', (msg, data)=>{
     setSet(data)
+    setFirst(false)
   })
 
   useEffect(()=>{
@@ -19,7 +24,7 @@ export default function BarChart() {
     })
   })
 
-  const style = {width: '1850px', height:'600px', backgroundColor:'white'}
+  const style = {width: '1650px', height:'600px', backgroundColor:'orange'}
   const { ref, xAxis, fringe, leaf, root, seedling } = set
   const option = {
     title: {
@@ -45,28 +50,43 @@ export default function BarChart() {
     tooltip: {},
     legend: {
       top: "10%",
-      left: "70%"
+      left: "70%",
+      textStyle: {
+        fontSize: 14
+      }
     },
     grid: {
+      top: 100,
       left: 50,
       bottom: 50,
-      height: "450px"
+      right: 100
+      // height: "1400px"
     },
     xAxis: {
       name: "accessions",
+      // name: "",
+      nameLocation: 'end',
       nameTextStyle: {
-        fontSize: 18
+        fontSize: 14
       },
       data: xAxis,
       axisLabel: {
-        rotate: 60
+        rotate: 60,
+        fontSize: 12
       }
     },
     yAxis: {
       name: "TPM",
+      // name: "",
+      position: 'top',
+      nameLocation: 'end',
       nameTextStyle: {
-        fontSize: 16
+        fontSize: 13
       },
+      axisLabel: {
+        // rotate: 60,
+        fontSize: 12
+      }
     },
     series: [{
       name: 'Fringe',
@@ -95,8 +115,10 @@ export default function BarChart() {
   }
   console.log('消息订阅拿到了set content:', set.ref);
   return(
-    <Suspense fallback={<div>Loading...</div>}>
-      <Charts option={option} style={style}></Charts>
+    <Suspense fallback={<Loading></Loading>}>
+      {
+        first ? <ChartBeforeLoad></ChartBeforeLoad> : <Charts option={option} style={style}></Charts>
+      }
     </Suspense>
   )
 }

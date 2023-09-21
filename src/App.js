@@ -1,16 +1,19 @@
 import React, {  } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { Layout } from 'antd'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Home from './pages/home'
 import Jbrowse from './pages/Jbrowse/jbrowse'
-import Variations from './pages/Variations/variations.jsx'
+// import Variations from './pages/Variations/variations.jsx'
+import Variations from './pages/Variations/variationsV3.jsx'
 import OrthExpress from './pages/OrthExpress/orthExpress'
 import OrthSeq from './pages/orthSeq'
 import ExpressMatrix from './pages/ExpressMatrix/expressMatrix'
-import Tools from './pages/tools'
-import Download from './pages/download'
+// import Tools from './pages/tools'
+import Blast from './pages/blast/blast'
+import Blat from './pages/blat/blat'
+import Download from './pages/Download/download'
 import Introduction from './pages/introduction'
 
 // 懒加载
@@ -29,13 +32,15 @@ export default function App() {
               <Route path='/orthExpress' element={<OrthExpress />}></Route>
               <Route path='/orthseq' element={<OrthSeq />}></Route>
               <Route path='/expressMatrix' element={<ExpressMatrix />}></Route>
-              <Route path='/tools' element={<Tools />}></Route>
+              {/* <Route path='/tools' element={<Tools />}></Route> */}
+              <Route path='/blast' element={<Blast />}></Route>
+              <Route path='/blat' element={<Blat />}></Route>
               <Route path='/download' element={<Download />}></Route>
               <Route path='/introduction' element={<Introduction />}></Route>
               <Route path='/' element={<Navigate to={'/home'} />}></Route>
             </Routes>
           </div>
-          <Footer></Footer>
+          {/* <Footer></Footer> */}
       </Layout>
     </>
     

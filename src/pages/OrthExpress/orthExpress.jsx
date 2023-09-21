@@ -22,18 +22,18 @@ export default function OrthExpress() {
   return (
     <>
       <Space direction="vertical" style={{display: 'flex'}} size="middle">
-      <Row>
-        <TopText text={text}></TopText>
-      </Row>
-      <Row>
-        <Col span={20} align='middle'>
-          <InputBox {...requestInfo}></InputBox>
-        </Col>
-        <Col span={24} offset={0}>
-          <BarChart></BarChart>
-        </Col>
-      </Row>
-    </Space>
-  </>
+        <Row>
+          <TopText text={text}></TopText>
+        </Row>
+        <Row>
+          <Col span={20} align='middle'>
+            <InputBox {...requestInfo}></InputBox>
+          </Col>
+          <Col span={23} align='middle'>
+            <BarChart></BarChart>
+          </Col>
+        </Row>
+      </Space>
+    </>
   )
 }

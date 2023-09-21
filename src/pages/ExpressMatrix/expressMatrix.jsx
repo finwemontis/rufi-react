@@ -3,7 +3,10 @@ import PubSub from 'pubsub-js'
 import { Col, Row, Space } from 'antd'
 import TopText from '../../components/TopText'
 import FormHeatmap from './FormHeatmap'
+import Loading from '../../components/Loading'
+import ChartBeforeLoad from '../../components/FirstLoad/ChartBeforeLoad'
 const Heatmap = lazy(()=>import('./Heatmap'))
+const Standardization = lazy(()=>import('./Standardization'))
 
 
 const text = {
@@ -19,17 +22,14 @@ const requestInfo = {
 
 export default function ExpressMatrix() {
 
-  const [ load, setLoad ] = useState(false)
+  const [ first, setFirst ] = useState(true)
   const [ set, setSet ] = useState({})
 
   let subToken = PubSub.subscribe('heatmapData', (msg, data)=>{
     console.log('this is data from server: msg:', msg, 'data:', data, 'type:', typeof(data))
     setSet(data)
-    if (load){
-      console.log('load is true')
-    } else {
-      setLoad(true)
-    }
+    setFirst(false)
+    
   })
   
   useEffect(()=>{
@@ -41,16 +41,16 @@ export default function ExpressMatrix() {
   console.log('this is heatmap');
 
   return (
-      <Space direction="vertical" style={{display: 'flex'}} size="middle">
-        <Row>
-          <TopText text={text}></TopText>
-        </Row>
-        <FormHeatmap {...requestInfo}></FormHeatmap>
-        <Suspense fallback={<div>loading...</div>}>
-          {
-            load ? (<Heatmap dataset={set}></Heatmap>) : ('asd')
-          }
-        </Suspense>
-    </Space>
+    <>
+      <Row>
+        <TopText text={text}></TopText>
+      </Row>
+      <FormHeatmap {...requestInfo}></FormHeatmap>
+      <Suspense fallback={<Loading></Loading>}>
+        {
+          first ? <ChartBeforeLoad></ChartBeforeLoad> : (<><Standardization></Standardization><Heatmap dataset={set}></Heatmap></>)
+        }
+      </Suspense>
+    </>
   )
 }

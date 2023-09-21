@@ -17,10 +17,10 @@ function MyInput(msg){
   function onSearch(param){
     if (param){
       request.get(url, {params: {param}}).then((result)=>{
-      if(result.status === 200){
-        PubSub.publish(pubName, result.data)
-      }
-    })
+        if(result.status === 200){
+          PubSub.publish(pubName, result.data)
+        }
+      })
     console.log('input.value:', input.current.input.value)
     } else if (!param) {
       console.log('input cant be empty');

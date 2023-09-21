@@ -34,7 +34,16 @@ const items = [
   },
   {
     label: 'Tools',
-    key: '/tools',
+    children: [
+      {
+        label: 'Blast',
+        key: '/blast',
+      },
+      {
+        label: 'Blat',
+        key: '/blat',
+      },
+    ],
   },
   {
     label: 'Download',

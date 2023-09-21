@@ -236,6 +236,7 @@ export default function VarTable(set) {
           return colStyle(text)
         }
         },
+        
         {
         title: 'HP486',
         dataIndex: 'HP486',
@@ -732,7 +733,7 @@ export default function VarTable(set) {
   // 
   const [showCol, setShowCol] = useState(columns)
 
-  function handleShowCol(list){
+  const handleShowCol = (list) => {
     console.log('handle list:', list)
     list.push('default')
     let newCols = columns.filter((item)=>{
